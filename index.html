@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>NBA</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="nba.css" />
+   <link rel="icon" href="img/nbalogo.png" height="5px" />
+
+   <style>
+      *{
+   padding: 0;
+   margin: 0;
+   font-family: helvetica;
+}
+
+@font-face {
+   font-family: henshin;
+   src: url("img/OpenSans-Regular.ttf");
+}
+
+body {
+   background-color: rgb(240, 238, 238);
+}
+
+/* HEADERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+header {
+   width: 100%;
+   position: fixed;
+   top: 0;
+   margin-bottom: 50px;
+   background-color: black;
+   justify-content: space-between;
+   display: grid;
+   grid-template-columns: 20% 80%;
+}
+
+header ul{
+   text-align: center;
+   margin-right: 23%;
+}
+
+header ul li {
+   display: inline-block;
+}
+
+header ul li a {
+   text-decoration: none;
+   padding: 15px 10px;
+   margin: 0 10px;
+   font-family: henshin;
+   font-weight: bold;
+   font-size: 18px;
+   display: inline-block;
+   letter-spacing: 1.5px;
+   color: rgba(255, 255, 255, 0.5);
+}
+
+header ul li a .active {
+   color: white;
+   font-family: henshin;
+}
+   
+header ul li a:hover{
+   color: white;
+   transform: scale(1.15);
+   -ms-transform: scale(1.15);
+   transition: 0.2s ease;
+}
+
+.intro{
+   background-color: rgb(14, 13, 13);
+}
+
+.intro .slider{
+   width: 1280px;
+   height: 720px;
+   background: url(img/Slide1.jpeg);
+   margin: 50px auto;
+   animation: slide 10s infinite;
+}
+
+@keyframes slide{
+   25%{
+      background: url(img/Slide1.jpeg);
+   }
+   50%{
+      background: url(img/Slide2.jpg);
+   }
+   75%{
+      background: url(img/Slide3.png);
+   }
+   100%{
+      background: url(img/Slide4.jpg);
+   }
+}
+
+/* MAINNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN */
+.container1{
+   width: 80vw;
+   margin: 50px auto;
+   display: grid;
+   grid-template-columns: 65% 34%;
+   grid-gap: 30px;
+}
+
+.main1{
+   background-color: white;
+   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.main1 h1{
+   background-color: #17408b ;
+   font-family: monospace;
+   color: white;
+   font-weight: bold;
+   letter-spacing: 5px;
+   text-align: center;
+   padding: 10px 0;
+}
+
+.main1 .games{
+   text-align: center;
+   display: flex;
+}
+ 
+.main1 .games .box{
+   width: 100%;
+}
+ 
+.main1 .games .box img{
+   width: 80%;
+   height: auto;
+}
+ 
+.main1 .more{
+   text-align: center;
+   padding-bottom: 30px;
+}
+
+.main1 .more a {
+   border: 2px solid;
+   border-radius: 10px;
+   padding: 5px 20px;
+   margin: 0 auto;
+   text-decoration: none ;
+   font-size: 24px;
+   color: inherit;
+   font-family: monospace;
+   font-weight: bold;
+}
+
+.main1 .more a:hover{
+   background-color: black;
+   color: white;
+   border: 0;
+}
+
+.main2 img{
+   width: 100%;
+   height: auto;
+   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+   margin: 40px 0;
+}
+
+.main2 img:hover{
+   transform: scale(1.05);
+   -ms-transform: scale(1.05);
+   transition: 0.8s ease;
+}
+
+.intro2{
+   margin: 100px auto;
+}
+
+.intro2 .vids{
+   text-align: center;
+   width: 80%;
+   margin: 0 auto;
+}
+
+.container2{
+   width: 80vw;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: 32% 67%;
+   grid-gap: 20px;
+}
+
+.main3{
+   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.main3 h1{
+   background-color: #17408b ;
+   font-family: monospace;
+   color: white;
+   font-weight: bold;
+   letter-spacing: 5px;
+   text-align: center;
+   padding: 10px 0;
+}
+
+.main3 .standings{
+   height: 727px;
+   background-color: rgba(255, 255, 255, 0.9);
+   text-align: center;
+   padding: 20px 0;
+}
+
+.main3 .standings p{
+   text-align: center;
+   padding: 20px 10px;
+   width: 10%;
+}
+
+.main3 .standings img{
+   margin: 13px 0;
+}
+
+.main3 .standings .row{
+   display: grid;
+   grid-template-columns: 15% 10% 28% 15% 15% 15%;
+   padding: 5px 10px;
+}
+
+.main3 .standings .row a{
+   color: black;
+   text-decoration: none;
+}
+
+.main3 .standings .row a p:hover{
+   font-weight: bold;
+   transform: scale(1.2);
+   -ms-transform: scale(1.2);
+   transition: 0.2s ease;
+}
+
+.main3 .standings .top{
+   background-color: gainsboro;
+   display: grid;
+   grid-template-columns: 15% 38% 16.5% 16.5% 15%;
+   padding: 0 5%;
+   font-size: 18px;
+   font-weight: bold;
+}
+
+.main3 .more{
+   background-color: rgba(255, 255, 255, 0.9);
+   text-align: center;
+   justify-content: center;
+   padding: 10px 0 30px 0;
+}
+
+.main3 .more a {
+   border: 2px solid;
+   border-radius: 10px;
+   padding: 5px 20px;
+   margin: 0 auto;
+   text-decoration: none ;
+   font-size: 24px;
+   color: inherit;
+   font-family: monospace;
+   font-weight: bold;
+}
+
+.main3 .more a:hover{
+   background-color: black;
+   color: white;
+   border: 0;
+}
+
+.main4{
+   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.main4 h1{
+   background-color: #17408b;
+   font-family: monospace;
+   color: white;
+   font-weight: bold;
+   letter-spacing: 5px;
+   text-align: center;
+   padding: 10px 0;
+}
+
+.main4 .stats{
+   height: 835px;
+   background-color: white;
+   text-align: center;
+   padding: 0 10px;
+   justify-content: center;
+   display: grid;
+   grid-template-columns: 30% 30% 30%;
+   grid-template-rows: 380px 300px;
+   grid-gap: 20px;
+}
+
+.main4 .stats .box{
+   width: 95%;
+   height: 300px;
+   margin-top: 50px;
+}
+
+.main4 .stats .box .top{
+   text-align: center;
+   padding: 20px 0;
+   border-bottom: 2px solid;
+   font-size: 14px;
+   font-weight: bold;
+   letter-spacing: 1px;
+}
+
+.main4 .stats .box .row{
+   display: grid;
+   grid-template-columns: 8% 80% 10%;
+   padding: 15px 0;
+   font-size: 14px;
+}
+
+.main4 .stats .row a{
+   text-decoration: none;
+   text-align: left;
+   padding-left: 10px;
+   color: black;
+}
+
+.main4 .stats .row a:hover{
+   font-weight: bold;
+   transform: scale(1.02);
+   -ms-transform: scale(1.02);
+   transition: 0.2s ease;
+}
+
+.main4 .stats .arrow{
+   width: 95%;
+   height: 300px;
+   margin-top: 70px;
+}
+
+.main4 .stats .arrow .right {
+   padding: 100px 0;
+   padding-right: 20px;
+}
+
+.main4 .stats .arrow .right img:hover{
+   transform: scale(1.3);
+   -ms-transform: scale(1.3);
+   transition: 0.3s ease;
+}
+
+/* NBA LEAGUE PASS AND MEDIA */
+.lower{
+   width: 80vw;
+   margin: 50px auto;
+   display: grid;
+   grid-template-columns: 67% 32%;
+   grid-gap: 20px;
+}
+
+.pass{
+   background-color: #17408b;
+   color: rgb(250, 250, 250);
+   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.pass .logo{
+   display: flex;
+   padding: 20px 0 10px 20px;
+   font-weight: bold;
+   font-size: 38px;
+}
+
+.pass .logo img{
+   padding: 6px 5px;
+}
+
+.pass .login{
+   padding: 10px 20px;
+   letter-spacing: 2px;
+}
+
+.pass .login .button{
+   padding: 10px 0;
+}
+
+.pass .login .button a{
+   text-decoration: none;
+}
+
+.pass .login .button  .signin{
+   width: fit-content;
+   background-color: white;
+   margin: 20px;
+   padding: 20px 30px;
+   color: black;
+   font-weight: bold;
+   border-radius: 50px;
+}
+
+.pass .login .button .signin:hover{
+   background-color: black;
+   color: white;
+   transform: scale(1.1);
+   -ms-transform: scale(1.1);
+   transition: 0.5s ease;
+}
+
+.follow{
+   background-color: white;
+   text-align: center;
+   color: white;
+   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+   padding: 20px;
+}
+
+.media h1{
+   font-family: monospace;
+   font-size: 35px;
+   color: black;
+   letter-spacing: 5px;
+   padding: 20px 0;
+   border-bottom: 2px solid;
+}
+
+.media .med{
+   justify-content: center;
+   margin-top: 70px;
+   display: grid;
+   grid-template-columns: 30% 30% 30%;
+}
+
+.media .medsos a img:hover{
+   transform: scale(1.2);
+   -ms-transform: scale(1.2);
+   transition: 0.2s ease;
+}
+
+.leaguepass{
+   width: 80vw;
+   height: auto;
+   margin: 10px auto;
+}
+
+.leaguepass img{
+   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+/* FOOTERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+footer .bot{
+   height: 270px;
+   background-color: #051c2d;
+   margin-top: 50px;
+   padding: 30px 50px;
+}
+
+footer .bot .bott{
+   width: 85%;
+   background-color:#051c2d;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: 16% 16% 16% 16% 20% 16%;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 10px;
+   text-align: left;
+   color: white;
+}
+
+footer .bot .bott .box{
+   height: 180px;
+   padding: 10px 0;
+   border-bottom: 2px solid;
+}
+
+footer .bot .bott .box .top{
+   margin-bottom: 25px;
+   font-weight: bold;
+}
+
+footer .bot .bott .box .content{
+   font-size: 12px;
+   margin: 10px 0;
+}
+
+footer .bot .bott .box .topright{
+   text-align: right;
+   margin-bottom: 25px;
+   font-weight: bold;
+}
+
+footer .bot .bott .box .right{
+   text-align: right;
+   margin: 10px 0;
+   font-size: 12px;
+}
+
+footer .bot .copyright{
+   width: 85%;
+   margin: 30px auto;
+   font-size: 10px;
+   font-family: Arial, Helvetica, sans-serif;
+   color: white;
+   display: grid;
+   grid-template-columns: 60% 40%;
+   text-align: left;
+}
+
+footer .bot .copyright .left .content{
+   text-align: left;
+}
+
+footer .bot .copyright .right{
+   display: grid;
+   grid-template-columns: 10% 11% 13% 10% 10%;
+   text-align: right;
+   justify-content: right;
+}
+
+footer .bot .copyright .right .meds img:hover{
+   transform: scale(1.2);
+   -ms-transform: scale(1.2);
+   transition: 0.2s ease;
+}
+
+/* copyright */
+/*FOOTERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+
+
+
+
+
+
+   </style>
+</head>
+<body>
+
+   <!--Header-->
+   <header>
+      <img src="img/nbawhite.png" height="30px" style="padding: 12px 30px;">
+      <ul>
+         <li><a href="NBA.html"><div class="active">HOME</div></a></li>
+         <li><a href="games.html">GAMES</a></li>
+         <li><a href="standings.html">STANDINGS</a></li>
+         <li><a href="teams.html">TEAMS</a></li>
+         <li><a href="stats.html">STATS</a></li>
+         <li><a href="awards.html">AWARDS</a></li>
+      </ul>      
+   </header>
+
+   <!--Banner-->
+   <a href="form.html"><img src="img/Playoffs2.jpg" width="100%" style="margin: 50px 0;"></a>
+
+
+   <!--Image-->
+  
+   <div class="intro">
+      <div class="slider"></div>
+   </div>
+
+   <!--Games-->
+   <div class="container1">
+      <div class="main1">
+         <h1>CHECK YOUR LATEST GAMES HERE</h1>
+         <div class="games">
+            <div class="box">
+               <img src="teams/game/Game1.png">
+               <map name="area">
+                  <area shape="rect" coords="100, 100, 100, 100" href="LAL.html">
+               </map>
+            </div> 
+            <div class="box">
+               <img src="teams/game/Game2.png">
+            </div>
+         </div>
+         <div class="more">
+               <a href="games.html">GO TO GAMES</a>
+         </div>
+      </div>
+      <div class="main2">
+         <a href="awards.html"><img src="img/MVP.png"></a>
+      </div>
+   </div>
+
+   <!--Video-->
+   <div class="intro2">
+      <img src="img/thiswhyweplay.png" width="100%" style="margin: 20px 0;">
+      <div class="vids">
+         <video src="img/NBA.mp4" muted autoplay loop width="60%" style="box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);"></video>
+      </div>
+   </div>
+
+   <!--Main-->
+   <div class="container2">
+      <div class="main3">
+         <h1>STANDINGS</h1> 
+         <div class="standings">
+            <div class="top"><p></p><p>Team</p><p>W</p><p>L</p><p>%</p></div>
+            <div class="row"><p>1.</p><img src="teams/UTA.png" height="30px"><a href="UTA.html"><p>UTA</p></a><p>50</p><p>19</p><p>72.5%</p></div>
+            <div class="row"><p>2.</p><img src="teams/PHX.png" height="30px"><a href="PHX.html"><p>PHX</p></a><p>48</p><p>20</p><p>70.6%</p></div>
+            <div class="row"><p>3.</p><img src="teams/PHI.png" height="30px"><a href="PHI.html"><p>PHI</p></a><p>47</p><p>21</p><p>69.1%</p></div>
+            <div class="row"><p>4.</p><img src="teams/LAC.png" height="30px"><a href="LAC.html"><p>LAC</p></a><p>45</p><p>23</p><p>66.2%</p></div>
+            <div class="row"><p>5.</p><img src="teams/DEN.png" height="30px"><a href="DEN.html"><p>DEN</p></a><p>44</p><p>24</p><p>64.7%</p></div>
+            <div class="row"><p>-</p><img src="teams/BKN.jpg" height="30px"><a href="BKN.html"><p>BKN</p></a><p>44</p><p>24</p><p>64.7%</p></div>
+            <div class="row"><p>7.</p><img src="teams/MIL.png" height="30px"><a href="MIL.html"><p>MIL</p></a><p>43</p><p>25</p><p>63.2%</p></div>
+            <div class="row"><p>8.</p><img src="teams/DAL.png" height="30px"><a href="DAL.html"><p>DAL</p></a><p>40</p><p>28</p><p>58.8%</p></div>
+            <div class="row"><p>9.</p><img src="teams/POR.png" height="30px"><a href="POR.html"><p>POR</p></a><p>40</p><p>29</p><p>58%</p></div>
+            <div class="row"><p>10.</p><img src="teams/LAL.png" height="30px"><a href="LAL.html"><p>LAL</p></a><p>38</p><p>30</p><p>55.9%</p></div>
+            </div>
+         <div class="more">
+               <a href="standings.html">GO TO STANDINGS</a>
+         </div>
+      </div>
+      <div class="main4">
+         <h1>STATS</h1>
+         <div class="stats">
+            <div class="box">
+               <div class="top">POINTS PER GAME</div>
+               <div class="row"><p>1.</p><a href="GSW.html"><p>Stephen Curry</p></a><p>31.8</p></div>
+               <div class="row"><p>2.</p><a href="WAS.html"><p>Bradley Beal</p></a><p>31.4</p></div>
+               <div class="row"><p>3.</p><a href="PHI.html"><p>Joel Embiid</p></a><p>29.2</p></div>
+               <div class="row"><p>4.</p><a href="POR.html"><p>Damian Lillard</p></a><p>28.7</p></div>
+               <div class="row"><p>5.</p><a href="MIL.html"><p>Giannis Antetokounmpo</p></a><p>28.2</p></div>
+            </div>
+            <div class="box">
+               <div class="top">REBOUNDS PER GAME</div>
+               <div class="row"><p>1.</p><a href="ATL.html"><p>Clint Capela</p></a><p>14.4</p></div>
+               <div class="row"><p>2.</p><a href="UTA.html"><p>Rudy Gobert</p></a><p>13.3</p></div>
+               <div class="row"><p>3.</p><a href="MEM.html"><p>Jonas Valanciunas</p></a><p>12.5</p></div>
+               <div class="row"><p>4.</p><a href="IND.html"><p>Domantas Sabonis</p></a><p>12.0</p></div>
+               <div class="row"><p>5.</p><a href="DEN.html"><p>Nikola Vucevic</p></a><p>11.6</p></div>
+            </div>
+            <div class="box">
+               <div class="top">ASSISTS PER GAME</div>
+               <div class="row"><p>1.</p><a href="WAS.html"><p>Russell Westbrook</p></a><p>11.7</p></div>
+               <div class="row"><p>2.</p><a href="ATL.html"><p>Trae Young</p></a><p>9.5</p></div>
+               <div class="row"><p>3.</p><a href="PHX.html"><p>Chris Paul</p></a><p>8.9</p></div>
+               <div class="row"><p>4.</p><a href="GSW.html"><p>Draymond Green</p></a><p>8.9</p></div>
+               <div class="row"><p>5.</p><a href="DAL.html"><p>Luka Doncic</p></a><p>8.6</p></div>
+            </div>
+            <div class="box">
+               <div class="top">BLOCKS PER GAME</div>
+               <div class="row"><p>1.</p><a href="IND.html"><p>Myles Turner</p></a><p>3.4</p></div>
+               <div class="row"><p>2.</p><a href="UTA.html"><p>Rudy Gobert</p></a><p>2.7</p></div>
+               <div class="row"><p>3.</p><a href="OKC.html"><p>Nerlens Noel</p></a><p>2.2</p></div>
+               <div class="row"><p>4.</p><a href="ATL.html"><p>Clint Capela</p></a><p>2.0</p></div>
+               <div class="row"><p>5.</p><a href="SAS.html"><p>Jakob Poeltl</p></a><p>1.8</p></div>
+            </div>
+            <div class="box">
+               <div class="top">STEALS PER GAME</div>
+               <div class="row"><p>1.</p><a href="MIA.html"><p>Jimmy Butler</p></a><p>2.1</p></div>
+               <div class="row"><p>2.</p><a href="IND.html"><p>T. J. McConnell</p></a><p>1.9</p></div>
+               <div class="row"><p>3.</p><a href="TOR.html"><p>Fred VanVleet</p></a><p>1.7</p></div>
+               <div class="row"><p>4.</p><a href="GSW.html"><p>Draymond Green</p></a><p>1.7</p></div>
+               <div class="row"><p>5.</p><a href="MIL.html"><p>Jrue Holiday</p></a><p>1.6</p></div>
+            </div>
+            <div class="arrow">
+               <div class="right"><a href="stats.html"><img src="teams/Game/right.png" height="100px"></a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!--Pass and Media-->
+   <div class="lower">
+      <div class="pass">
+         <div class="logo">
+            <img src="img/nbawhite.png" height="30px">
+            <p>League Pass</p>
+         </div>
+         <div class="login">
+            <p style="margin-bottom: 10px;"><b>Watch games live or on replay on any device, including your computer, smartphone and TV!</b></p>
+            <p>Your ticket to the action: watch the whole league or your favorite team, choose a single game, or check out more options.</p>
+            <div class="button">
+               <a href="form.html"><div class="signin">SIGN IN</div></a>
+            </div>
+            <p style="font-size: 12px;">Terms and blackouts may apply.</p>
+         </div>
+      </div>
+   
+      <div class="follow">
+         <div class="media">
+            <h1>Follow Us</h1>
+            <div class="med">
+               <div class="medsos">
+                  <a href="https://www.facebook.com/nba" target="_blank">
+                     <img src="img/fb.png" height="50px">
+                  </a>
+               </div>
+               <div class="medsos">
+                  <a href="https://www.instagram.com/nba" target="_blank">
+                     <img src="img/ig.png" height="50px">
+                  </a>
+               </div>
+               <div class="medsos">
+                  <a href="https://twitter.com/NBA" target="_blank">
+                     <img src="img/twitter.png" height ="50px">
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="leaguepass">
+      <a href="form.html"><img src="img/leaguepass.png" width="100%"></a>
+   </div>
+
+   <!--Footer-->
+   <footer>
+      <div class="bot">
+         <div class="bott">
+            <div class="box">
+               <div class="top">NBA ORGANIZATION</div>
+               <div class="content">NBA Official</div>
+               <div class="content">NBA Careers</div>
+            </div>
+            <div class="box">
+               <div class="top">NBA INITIATIVES</div>
+               <div class="content">NBA Cares</div>
+               <div class="content">Jr. NBA</div>
+               <div class="content">NBA Voices</div>
+               <div class="content">NBA FIT</div>
+               <div class="content">Hoops for Troops</div>
+            </div>
+            <div class="box">
+               <div class="top">ACROSS THE LEAGUE</div>
+               <div class="content">NBA Communications</div>
+               <div class="content">Lockervision</div>
+               <div class="content">NBA Transactions</div>
+            </div>
+            <div class="box">
+               <div class="top">SHOP</div>
+               <div class="content">Global Stores</div>
+               <div class="content">NYC Stores</div>
+               <div class="content">NBA Auctions</div>
+               <div class="content">NBA Photostore</div>
+            </div>
+            <div class="box">
+               <div class="top"></div>
+            </div>
+            <div class="box">
+               <div class="topright">SUBCSRIPTIONS</div>
+               <div class="right">NBA TV</div>
+               <div class="right">League Pass</div>
+            </div>
+         </div>
+         
+         <div class="copyright">
+            <div class="left">
+               &copy 2021 NBA. All Rights Reserved.
+               <div class="content">
+                  Privacy Policy | Terms of Use | Accessibility and Closed Captions | Do Not Sell Personal Information | Customer Support | Manage Cookies | Ad Choices
+               </div>
+            </div>
+            <div class="right">
+               <div class="meds">
+                  <a href="https://www.instagram.com/nba" target="_blank">
+                     <img src="img/igw.png" height="20px">
+                  </a>
+               </div>
+               <div class="meds">
+                  <a href="https://www.facebook.com/nba" target="_blank">
+                     <img src="img/fbww.png" height="20px">
+                  </a>
+               </div>
+               <div class="meds">
+                  <a href="https://www.youtube.com/channel/UCWJ2lWNubArHWmf3FIHbfcQ" target="_blank">
+                     <img src="img/ytw.png" height="20px">
+                  </a>
+               </div>
+               <div class="meds">
+                  <a href="https://twitter.com/NBA" target="_blank">
+                     <img src="img/twtw.png" height ="20px">
+                  </a>
+               </div>
+               <div class="meds">
+                  <a href="https://www.twitch.tv/nba" target="_blank">
+                     <img src="img/twcw.png" height="20px">
+                  </a>
+               </div>
+            </div>
+         </div>   
+      </div>
+   </footer>
+</body>
+</html>
